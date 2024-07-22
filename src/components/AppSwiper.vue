@@ -4,8 +4,14 @@
     keyName="image"
     showTitle
     :title-style="{ color: 'red', textAlign: 'center' }"
-    :autoplay="false"
+    :autoplay="true"
+    :interval="3000"
+    :duration="500"
     circular
+    :height="200"
+    indicator
+    indicatorActiveColor="#FF0000"
+    indicatorInactiveColor="#FFFFFF"
   ></uv-swiper>
 </template>
 
@@ -22,6 +28,4 @@ export default {
 }
 </script>
 
-<style scoped>
-/* 你可以在这里添加组件的样式 */
-</style>
+<style scoped></style>

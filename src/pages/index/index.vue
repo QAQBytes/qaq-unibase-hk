@@ -1,17 +1,16 @@
-<!-- 使用 type="home" 属性设置首页，其他页面不需要设置，默认为page；推荐使用json5，更强大，且允许注释 -->
 <route lang="json5" type="home">
 {
   style: {
-    navigationStyle: 'custom',
     navigationBarTitleText: '首页',
   },
 }
 </route>
 <template>
-  <view
-    class="bg-white overflow-hidden pt-2 px-4"
-    :style="{ marginTop: safeAreaInsets?.top + 'px' }"
-  >
+  <view class="bg-white overflow-hidden pt-2 px-4">
+    <!-- 轮播图 -->
+    <view class="swiper-container">
+      <AppSwiper :list="swiperList" />
+    </view>
     <view class="mt-12">
       <image src="/static/logo.svg" alt="" class="w-28 h-28 block mx-auto" />
     </view>
@@ -32,30 +31,29 @@
       <uv-icon name="home" color="red"></uv-icon>
       <uv-icon name="home" class="text-green"></uv-icon>
     </view>
-    <view>
-      <AppSwiper :list="swiperList" />
-    </view>
   </view>
 </template>
 
 <script lang="ts" setup>
 import PLATFORM from '@/utils/platform'
 import AppSwiper from '@/components/AppSwiper.vue'
+import { ref, onMounted } from 'vue'
 
 defineOptions({
   name: 'Home',
 })
 
 // 获取屏幕边界到安全区域距离
-const { safeAreaInsets } = uni.getSystemInfoSync()
+const safeAreaInsets = ref({ top: 0 })
+onMounted(() => {
+  const systemInfo = uni.getSystemInfoSync()
+  safeAreaInsets.value.top = systemInfo.statusBarHeight + 44 // 假设导航栏高度为44px
+})
+
 const author = ref('菲鸽')
 const description = ref(
   'unibest 是一个集成了多种工具和技术的 uniapp 开发模板，由 uniapp + Vue3 + Ts + Vite4 + UnoCss + UniUI + VSCode 构建，模板具有代码提示、自动格式化、统一配置、代码片段等功能，并内置了许多常用的基本组件和基本功能，让你编写 uniapp 拥有 best 体验。',
 )
-// 测试 uni API 自动引入
-onLoad(() => {
-  console.log(author)
-})
 
 const swiperList = [
   {
@@ -74,6 +72,22 @@ const swiperList = [
 </script>
 
 <style>
+/* 调整轮播图容器样式，确保位置正确 */
+.swiper-container {
+  position: fixed;
+  top: var(--safe-area-top); /* 使用 CSS 变量 */
+  right: 8px; /* 设置右边距 */
+  left: 8px; /* 设置左边距 */
+  z-index: 999;
+  width: calc(100% - 16px); /* 给左右两边留出8px的空隙 */
+  margin: 0 auto; /* 居中 */
+}
+
+.content {
+  padding: 20px;
+  margin-top: 200px; /* 确保内容区域不被轮播图遮挡，值应与轮播图高度相同 */
+}
+
 .main-title-color {
   color: #d14328;
 }
