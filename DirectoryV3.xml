@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <trees>
+     <tree path="/src/hooks" title="存放自定义 hooks"/>
+   <tree path="/src/interceptors" title="存放拦截器"/>
+   <tree path="/src/layouts" title="存放布局组件，定义不同页面的布局结构"/>
+   <tree path="/src/pages" title="存放应用页面的目录"/>
+   <tree path="/src/pages-sub" title="存放子页面或次级页面的目录，定义了额外的页面结构"/>
+   <tree path="/src/service" title="存放服务相关的代码，通常包含 API 请求和业务逻辑"/>
+   <tree path="/src/static" title="存放静态资源，如图标、图片等"/>
+   <tree path="/src/store" title="存放状态管理相关的代码"/>
+   <tree path="/src/style" title="存放全局样式文件和 CSS 处理"/>
+   <tree path="/src/types" title="存放 TypeScript 类型定义文件"/>
+   <tree path="/src/utils" title="存放工具函数和公共逻辑。"/>
+  <tree path="/scripts" title="存放项目中使用的脚本文件"/>
+  <tree path="/src/components" title="存放项目中的复用组件，可能包含多个 Vue 组件。"/>
+</trees>

@@ -1,0 +1,10 @@
+# 设置所有文本文件为 LF
+* text=auto
+
+# 特定文件类型使用 CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 特定文件类型使用 LF
+*.sh text eol=lf
+*.xml text eol=lf
