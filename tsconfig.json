@@ -18,9 +18,9 @@
     "types": [
       "@dcloudio/types",
       "@types/wechat-miniprogram",
-      "wot-design-uni/global.d.ts",
       "@ttou/uv-typings/shim",
-      "@ttou/uv-typings/v2"
+      "@ttou/uv-typings/v2",
+      "@uni-helper/uni-ui-types"
     ]
   },
   "vueCompilerOptions": {

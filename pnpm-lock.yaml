@@ -59,6 +59,9 @@ importers:
       '@dcloudio/uni-quickapp-webview':
         specifier: 3.0.0-alpha-4020320240703001
         version: 3.0.0-alpha-4020320240703001(postcss@8.4.38)(rollup@4.18.0)(vue@3.4.21(typescript@4.9.5))
+      '@dcloudio/uni-ui':
+        specifier: ^1.5.6
+        version: 1.5.6
       clipboard:
         specifier: ^2.0.11
         version: 2.0.11
@@ -86,9 +89,6 @@ importers:
       vue-i18n:
         specifier: ^9.1.9
         version: 9.13.1(vue@3.4.21(typescript@4.9.5))
-      wot-design-uni:
-        specifier: ^1.2.26
-        version: 1.2.26(vue@3.4.21(typescript@4.9.5))
       z-paging:
         specifier: ^2.7.10
         version: 2.7.10
@@ -1076,6 +1076,9 @@ packages:
 
   '@dcloudio/uni-stat@3.0.0-alpha-4020320240703001':
     resolution: {integrity: sha512-EIY+fiLWAp8D6DFqGcE4phKRjiUOhNlR8De8OcB/jnqy5x0swA2PWtP9L4YNJ/U13OA/uscKrk0t6wzH5RJjTw==}
+
+  '@dcloudio/uni-ui@1.5.6':
+    resolution: {integrity: sha512-jmb98PasFvZkrIDXGh94GbdWg2/jyhgs1HUG+bU8eyL7Ltias/5XBz4q8w9RXyWUfqepJRqapPA2IIQpLCuTIg==}
 
   '@dcloudio/vite-plugin-uni@3.0.0-alpha-4020320240703001':
     resolution: {integrity: sha512-E/3bsl0NGkORvx7zO+QDbNSl+f5Uy+KB52kV0Bf63WMtj85rkhryurhl8q2aJA9VCwRgsov/C0PEu7kP+gH5Hw==}
@@ -5540,12 +5543,6 @@ packages:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
 
-  wot-design-uni@1.2.26:
-    resolution: {integrity: sha512-y2YL1lHobRWAJ+22E9G9lNLLIChQ8JY9loOt30PRQJ/izvd5qc+2+BqXCKlFquk2y+2qA75TEfJ/MsaESnYExA==}
-    engines: {HBuilderX: ^3.8.7}
-    peerDependencies:
-      vue: '>=3.2.47'
-
   wrap-ansi@7.0.0:
     resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}
     engines: {node: '>=10'}
@@ -7175,6 +7172,8 @@ snapshots:
       - supports-color
       - ts-node
       - vue
+
+  '@dcloudio/uni-ui@1.5.6': {}
 
   '@dcloudio/vite-plugin-uni@3.0.0-alpha-4020320240703001(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.8(@types/node@20.14.2)(sass@1.77.5)(terser@5.31.1))(vue@3.4.21(typescript@4.9.5))':
     dependencies:
@@ -12438,10 +12437,6 @@ snapshots:
       isexe: 2.0.0
 
   word-wrap@1.2.5: {}
-
-  wot-design-uni@1.2.26(vue@3.4.21(typescript@4.9.5)):
-    dependencies:
-      vue: 3.4.21(typescript@4.9.5)
 
   wrap-ansi@7.0.0:
     dependencies:
