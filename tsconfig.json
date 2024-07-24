@@ -17,10 +17,10 @@
     "lib": ["esnext", "dom"],
     "types": [
       "@dcloudio/types",
+      "@uni-helper/uni-ui-types",
       "@types/wechat-miniprogram",
       "@ttou/uv-typings/shim",
-      "@ttou/uv-typings/v2",
-      "@uni-helper/uni-ui-types"
+      "@ttou/uv-typings/v2"
     ]
   },
   "vueCompilerOptions": {
